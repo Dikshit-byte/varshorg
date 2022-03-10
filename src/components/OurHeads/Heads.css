@@ -1,6 +1,5 @@
 .heading{
- text-align: center;   
- background-color: #fff;
+ text-align: center;    
 }
 .heading h1{
  font-size: 4rem;
@@ -9,7 +8,7 @@
 }
 .Heads{
     display: flex;
-        background-color: #fff;
+
     justify-content: space-evenly;
 
     }

@@ -1,8 +1,3 @@
-import Tilt from 'react-tilt'
-import {useEffect,useState} from "react"
-import AOS  from 'aos';
-import 'aos/dist/aos.css'
-
 import {
     Box,
     Center,
@@ -13,23 +8,13 @@ import {
     Image,
   } from '@chakra-ui/react';
   
-  export default function ProductSimple({name,designation,image}) {
-
-    useEffect(() => {
-      AOS.init({
-     offset: 200,
-     duration: 600,
-     easing: 'ease-in-sine',
-     delay: 100,
-    });
-    AOS.refresh();
-    
-    }, []);
-
-
+  const IMAGE =
+    'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80';
+  
+  export default function ProductSimple() {
     return (
       <Center py={12}>
-        <Box  data-aos="zoom-in-down"
+        <Box
           role={'group'}
           p={6}
           maxW={'330px'}
@@ -39,8 +24,7 @@ import {
           rounded={'lg'}
           pos={'relative'}
           zIndex={1}>
-      <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 250, width: 250 }} >
-          <Box 
+          <Box
             rounded={'lg'}
             mt={-12}
             pos={'relative'}
@@ -53,7 +37,7 @@ import {
               pos: 'absolute',
               top: 5,
               left: 0,
-              // backgroundImage: `url(${})`,
+              backgroundImage: `url(${IMAGE})`,
               filter: 'blur(15px)',
               zIndex: -1,
             }}
@@ -62,24 +46,29 @@ import {
                 filter: 'blur(20px)',
               },
             }}>
-            <div className="Tilt-inner">  <Image
+            <Image
               rounded={'lg'}
-              height={250}
+              height={230}
               width={282}
               objectFit={'cover'}
-              src={image}
-            /></div>
-           
+              src={IMAGE}
+            />
           </Box>
-          
-        </Tilt>
           <Stack pt={10} align={'center'}>
-            <Text color={'gray.700'} fontSize={'xl'} fontWeight={600} textTransform={'uppercase'} >
-             {name}
+            <Text color={'gray.700'} fontSize={'sm'} textTransform={'uppercase'}>
+             ADARSH  GUPTA
             </Text>
             <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={800}>
-              {designation}
+              CEO
             </Heading>
+            {/* <Stack direction={'row'} align={'center'}>
+              <Text fontWeight={800} fontSize={'xl'}>
+                $57
+              </Text>
+              <Text textDecoration={'line-through'} color={'gray.600'}>
+                $199
+              </Text>
+            </Stack> */}
           </Stack>
         </Box>
       </Center>

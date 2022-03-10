@@ -15,8 +15,7 @@ import {
     useBreakpointValue,
     useDisclosure,
 } from '@chakra-ui/react';
-import { Image } from '@chakra-ui/react';
-import logo from "../../images/logo.png";
+import { Image } from '@chakra-ui/react'
 import {
     HamburgerIcon,
     CloseIcon,
@@ -28,16 +27,16 @@ export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Box  >
-            <Flex className='navbar'
-                // bg={useColorModeValue('', 'gray.800')}
-                color={useColorModeValue('white.600', 'white')}
-                minH={'80px'}
-                py={{ base: 4 }}
+        <Box>
+            <Flex
+                bg={useColorModeValue('white', 'gray.800')}
+                color={useColorModeValue('gray.600', 'white')}
+                minH={'60px'}
+                py={{ base: 2 }}
                 px={{ base: 4 }}
-                // borderBottom={1}
-                // borderStyle={'solid'}
-                // borderColor={useColorModeValue('White.200', 'White.900')}
+                borderBottom={1}
+                borderStyle={'solid'}
+                borderColor={useColorModeValue('gray.200', 'gray.900')}
                 align={'center'}>
                 <Flex
                     flex={{ base: 1, md: 'auto' }}
@@ -57,10 +56,8 @@ export default function WithSubnavigation() {
                         textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                         fontFamily={'heading'}
                         color={useColorModeValue('gray.800', 'white')}>
-                        <a href='/' style={{textDecoration:"none"}}><img src={logo} alt='company_logo' width="40px" height="20px"/></a>
-                       
+                        VARSH SERVICES
                     </Text>
-                    
 
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
@@ -72,6 +69,32 @@ export default function WithSubnavigation() {
                     justify={'flex-end'}
                     direction={'row'}
                     spacing={6}>
+                    {/* <Image
+                        borderRadius='full'
+                        boxSize='80px'
+                        src='https://cdn.pixabay.com/photo/2018/06/17/20/35/chain-3481377__480.jpg'
+                        alt='Dan Abramov'
+                    /> */}
+                    {/* <Button
+                        as={'a'}
+                        fontSize={'sm'}
+                        fontWeight={400}
+                        variant={'link'}
+                        href={'#'}>
+                        Sign In
+                    </Button>
+                    <Button
+                        display={{ base: 'none', md: 'inline-flex' }}
+                        fontSize={'sm'}
+                        fontWeight={600}
+                        color={'white'}
+                        bg={'pink.400'}
+                        href={'#'}
+                        _hover={{
+                            bg: 'pink.300',
+                        }}>
+                        Sign Up
+                    </Button> */}
                 </Stack>
             </Flex>
 
@@ -234,15 +257,6 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-    
-    {
-        label: 'Home',
-        href: '/',
-    },
-    {
-        label: 'About Us',
-        href: '/about',
-    },
     {
         label: 'Services',
         children: [
@@ -265,7 +279,6 @@ const NAV_ITEMS: Array<NavItem> = [
     },
     {
         label: 'Contact Us',
-        href: '/contact'
         // children: [
         //     // {
         //     //     label: 'Job Board',
@@ -281,6 +294,6 @@ const NAV_ITEMS: Array<NavItem> = [
     },
     {
         label: 'Opportunities',
-        href: '/careers',
+        href: '#',
     }
 ];

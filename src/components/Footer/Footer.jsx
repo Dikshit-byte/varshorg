@@ -62,7 +62,6 @@ const SocialButton = ({
 };
 
 export default function SmallWithLogoLeft() {
-  const date = new Date().getFullYear();
   return (
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
@@ -76,12 +75,12 @@ export default function SmallWithLogoLeft() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
         {/* <Logo /> */}
-        <Text style={{fontFamily:"Poppins,sans-serif"}}>© {date} VARSH SERVICES. All rights reserved</Text>
+        <Text>© 2022 VARSH SERVICES PVT LTD. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
           <SocialButton label={'Twitter'} href={'#'}>
             <FaTwitter />
           </SocialButton>
-          <SocialButton label={'Whastapp'} href={'#'}>
+          <SocialButton label={'YouTube'} href={'#'}>
             <FaYoutube />
           </SocialButton>
           <SocialButton label={'Instagram'} href={'#'}>
