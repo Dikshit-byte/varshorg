@@ -11,6 +11,7 @@ import WhatsappImg from '../images/founder.JPG'
 import About from './Aboutus/About'
 import Carasoul from './Aboutus/Carasoul'
 import Abouttwo from './Aboutus/Abouttwo'
+import AboutFooter from './Aboutus/Aboutfooter';
 function Main() {
   return (<>
   <FloatingWhatsApp
@@ -35,10 +36,11 @@ function Main() {
     <Abouttwo />
     {/* <Features/> */}
 
+    {/* <Features/> */}
     <Testimonials/>
     {/* <Heads/> */}
     <Contact/>
-    <Footer/>
+    <AboutFooter/>
   </>);
 }
 
