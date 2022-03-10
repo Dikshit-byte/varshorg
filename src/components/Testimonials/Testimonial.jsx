@@ -1,3 +1,6 @@
+import AOS  from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 import {
   Avatar,
   Box,
@@ -9,38 +12,42 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
+// import img1 from "../../images/kalapana foods.jpg"
 const testimonials = [
   {
-    name: 'Brandon P.',
-    role: 'Chief Marketing Officer',
+    id: 0,
+    name: 'Kalpana Foods',
+    role: 'Namish Chauhan',
     content:
-      'It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!',
-    avatar:
-      'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+      'It really saves me time and effort. It is exactly what our business has been lacking. Varsh is the most valuable business resource we have ever purchased. After using Varsh Services my business skyrocketed!',
+    avatar: 'https://i.pinimg.com/originals/bf/e6/5e/bfe65ef4bb063898092b24ecbf2ce586.jpg',
   },
   {
-    name: 'Krysta B.',
-    role: 'Entrepreneur',
+    id: 1,
+    name: 'Starwell Foundation',
+    role: 'An Online Foundation',
     content:
-      "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
+      "We didn't even need training. We've used Varsh services for the last one year. We have gotten at least 50 times the value from Varsh. We made back real value in just 48 hours!",
     avatar:
-      'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+      'https://i.pinimg.com/originals/63/3b/81/633b810061cfb6fdacb9dc3ff6cf20ae.jpg',
   },
   {
-    name: 'Darcy L.',
-    role: 'Movie star',
+    id: 2,
+    name: 'Apna Kitchen',
+    role: 'An Online Food Store',
     content:
-      "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, EEZY is the coolest, most happening thing around! I love EEZY!",
+      "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, Varsh is the coolest, most happening thing around! We love Varsh!",
     avatar:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80',
+      'https://i.pinimg.com/originals/dc/b6/15/dcb6159ec4170d294a53ec12b6925685.jpg',
   },
   {
-    name: 'Daniel T.',
-    role: 'Musician',
+    id: 3,
+    name: 'Vindhyachal Construction',
+    role: 'A construction B2B company',
     content:
-      'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!',
+      'I am so pleased with this product. Varsh is both attractive and highly adaptable. Without Varsh, we would have gone bankrupt by now. Thank you for creating this product!',
     avatar:
-      'https://images.unsplash.com/photo-1606513542745-97629752a13b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+      'https://i.pinimg.com/originals/3e/20/46/3e2046ec1c0c298c1b5dbaafda528c05.jpg',
   },
 ];
 
@@ -60,9 +67,20 @@ interface TestimonialCardProps {
 }
 
 function TestmonialCard(props: TestimonialCardProps) {
+
+  useEffect(() => {
+    AOS.init({
+   offset: 100,
+   duration: 600,
+   // easing: 'ease-in-sine',
+   delay:50,
+  });
+  AOS.refresh();
+  
+  }, []);
   const { name, role, content, avatar, index } = props;
   return (
-    <Flex
+    <Flex 
       boxShadow={'lg'}
       maxW={'640px'}
       direction={{ base: 'column-reverse', md: 'row' }}
@@ -97,7 +115,7 @@ function TestmonialCard(props: TestimonialCardProps) {
         left: 0,
         backgroundImage: backgrounds[index % 4],
       }}>
-      <Flex
+      <Flex  data-aos="fade-up"
         direction={'column'}
         textAlign={'left'}
         justifyContent={'space-between'}>
@@ -174,7 +192,7 @@ export default function GridBlurredBackdrop() {
         mt={16}
         mx={'auto'}>
         {testimonials.map((cardInfo, index) => (
-          <TestmonialCard {...cardInfo} index={index} />
+          <TestmonialCard {...cardInfo} index={index}/>
         ))}
       </SimpleGrid>
       <Box>
