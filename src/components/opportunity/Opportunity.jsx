@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import React from "react";
 import FloatingWhatsApp from 'react-floating-whatsapp'
-import WhatsappImg from '../../images/founder.JPG';
+import WhatsappImg from '../../images/project manager.jpg';
 import { Pane, FileUploader, FileCard } from 'evergreen-ui'
 import Footer from '../Footer/Footer';
 import {send} from "emailjs-com";
@@ -83,7 +83,7 @@ export default function JoinOurTeam() {
   }
   return (<>
    <FloatingWhatsApp
-        phoneNumber="+919264970728"
+        phoneNumber="+916387681558"
         accountName="Varsh Services"
         allowClickAway
         notification
@@ -208,6 +208,7 @@ export default function JoinOurTeam() {
                 _placeholder={{
                   color: 'gray.500',
                 }}
+                required
               />
               <Input
                 placeholder="Lastname"
@@ -220,6 +221,7 @@ export default function JoinOurTeam() {
                 _placeholder={{
                   color: 'gray.500',
                 }}
+                required
               />
               <Input
                 placeholder="+91 (___) __-___-___"
@@ -232,6 +234,7 @@ export default function JoinOurTeam() {
                 _placeholder={{
                   color: 'gray.500',
                 }}
+                required
               />
               <Input
                 placeholder="Please enter your resume google link"
@@ -244,6 +247,7 @@ export default function JoinOurTeam() {
                 _placeholder={{
                   color: 'gray.500',
                 }}
+                required
               />
               
               <Pane maxWidth={500}>

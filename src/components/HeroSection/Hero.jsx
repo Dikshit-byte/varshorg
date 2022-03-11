@@ -47,7 +47,7 @@ export default function CallToActionWithIllustration() {
               colorScheme={'cyan'}
               bg={'white.400'}
               _hover={{ bg: 'white' }}>
-              <a href="https://drive.google.com/file/d/1IKhFJZlxR0Xf3h3ulQspvJU1CzsT0y-G/view" target="__blank">
+              <a href="https://drive.google.com/file/d/1UDVgiO6fNkpyHW-tb3IyZmXlmiSetku6/view?usp=sharing" target="__blank">
                 Download Now
               </a>
             </Button>
