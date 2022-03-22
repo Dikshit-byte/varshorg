@@ -30,13 +30,13 @@ function Main() {
    <Navbar/>
     <Hero/>
     </div>
-    <div className="carousal hide-overflow">
+    {/* <div className="carousal hide-overflow">
       <Carasoul/>
-      </div>
+      </div> */}
     <Abouttwo />
     {/* <Features/> */}
 
-    {/* <Features/> */}
+    <Features/>
     <Testimonials/>
     {/* <Heads/> */}
     <Contact/>
