@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import Aboutone from './Aboutone'
 import Abouttwo from './Abouttwo'
 import Aboutzero from './Aboutzero'
@@ -8,8 +9,12 @@ import Carasoul from './Carasoul'
 import FloatingWhatsApp from 'react-floating-whatsapp'
 import WhatsappImg from '../../images/project manager.jpg'
 import {Heads} from '../OurHeads/Heads';
+import AboutReal from './AboutReal'
 // import Aboutthree from '../Footer/'
 const About = () => {
+  useEffect(() => {
+    window.history.scrollRestoration = "manual"
+  },[]);
   return (
     <>
     <FloatingWhatsApp
@@ -32,6 +37,7 @@ const About = () => {
       <Carasoul/>
       </div>
       <Abouttwo/>
+      <AboutReal/>
       <Heads/>
     </div>
     <Aboutfooter/>
@@ -39,4 +45,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;

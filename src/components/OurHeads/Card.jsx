@@ -25,8 +25,6 @@ import {
     AOS.refresh();
     
     }, []);
-
-
     return (
       <Center py={12}>
         <Box  data-aos="zoom-in-down"
@@ -64,7 +62,7 @@ import {
             }}>
             <div className="Tilt-inner">  <Image
               rounded={'lg'}
-              height={250}
+              height={280}
               width={282}
               objectFit={'cover'}
               src={image}

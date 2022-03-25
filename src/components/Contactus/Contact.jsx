@@ -41,7 +41,7 @@ form?.addEventListener("submit", handleSubmit);
     <section className="contact section" id="contact" style={{margin:"15px"}}>
       <h1 className="section_title">Contact Us</h1>
       <span className="section_subtitle">
-        Want to connect? Our inbox is always open!!
+      Have a project?We’re here, let’s work together
       </span>
 
       <div className="contact_container container grid">
@@ -51,7 +51,7 @@ form?.addEventListener("submit", handleSubmit);
               <i className="uil uil-envelope-alt contact_icon"></i>
               <div>
                 <h3 className="contact_title">Email</h3>
-                <span className="contact_subtitle">admin@varshservices.com</span>
+                <span className="contact_subtitle">support@varsh.org</span>
               </div>
             </div>
           </a>

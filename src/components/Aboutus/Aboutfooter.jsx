@@ -11,10 +11,6 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
-
-// import AppStoreBadge from '@/components/AppStoreBadge';
-// import PlayStoreBadge from '@/components/PlayStoreBadge';
-
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
@@ -77,17 +73,9 @@ export default function LargeWithAppLinksAndSocial() {
 
           <Stack align={'flex-start'}>
             <ListHeader>Legal</ListHeader>
-            {/* <Link href={'#'}>Cookies Policy</Link> */}
-            <Link href={'#'}>Privacy Policy</Link>
-            <Link href={'#'}>Terms of Service</Link>
-            {/* <Link href={'#'}>Law Enforcement</Link> */}
+            <Link href={'privacy'}>Privacy Policy</Link>
+            <Link href={'terms'}>Terms of Service</Link>
           </Stack>
-
-          {/* <Stack align={'flex-start'}>
-            <ListHeader>Install App</ListHeader>
-            <AppStoreBadge />
-            <PlayStoreBadge />
-          </Stack> */}
         </SimpleGrid>
       </Container>
 
