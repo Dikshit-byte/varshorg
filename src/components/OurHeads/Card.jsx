@@ -1,5 +1,5 @@
 import Tilt from 'react-tilt'
-import {useEffect,useState} from "react"
+import {useEffect} from "react"
 import AOS  from 'aos';
 import 'aos/dist/aos.css'
 
@@ -51,7 +51,6 @@ import {
               pos: 'absolute',
               top: 5,
               left: 0,
-              // backgroundImage: `url(${})`,
               filter: 'blur(15px)',
               zIndex: -1,
             }}

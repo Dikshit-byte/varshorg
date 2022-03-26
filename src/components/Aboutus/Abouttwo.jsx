@@ -1,7 +1,6 @@
 import React from "react";
 import about1 from "../../images/aboutimg1.jpg";
 import about2 from "../../images/aboutimg.jpg";
-import Aboutone from './Aboutone'
 import {
   Box,
   Button,

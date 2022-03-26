@@ -17,7 +17,7 @@ function Main() {
         accountName="Varsh Services"
         allowClickAway
         notification
-        notificationDelay={60000} // 1 minute
+        notificationDelay={60000}
         notificationSound
         avatar ={WhatsappImg} 
         className ="whatsapp"
