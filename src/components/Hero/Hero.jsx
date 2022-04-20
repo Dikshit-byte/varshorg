@@ -14,6 +14,7 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
   import Lottie2 from "../../assets/lottie3.json";
+  import { NavLink } from 'react-router-dom';
  import AnimateLottie from "../../AnimationLottie";
   export default function CallToActionWithVideo() {
     return (
@@ -59,7 +60,9 @@ import {
                 bg={'black'}
                 _hover={{ bg: 'black' }}
                 >
-              Our Templates >>
+              <NavLink exact="true" to="/templates">
+                            Our Templates >>
+                          </NavLink>
               </Button>
               {/* <Button
               rounded={'full'}

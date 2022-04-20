@@ -106,7 +106,7 @@ cardZoomer(".card");
       },[])
   return (
     <div className='Temp'>
-    <p className="date">Our Templates</p>
+    {/* <p className="date">Our Templates</p> */}
     {/* <h1 className="headline">Today</h1> */}
     <div className="grid">
       <div className="width-12/12 width-7/12@m">
