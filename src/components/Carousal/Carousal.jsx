@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
+import Image2 from "../../assets/image2.png";
 import './Carousal.css'
 const Carousal = () => {
     useEffect(()=>{
@@ -46,11 +47,20 @@ window.addEventListener('keyup', (evt) => {
     },[]);
   return (
     <>
-    <div class="coverflow">
-    <a class="prev-arrow"></a><img class="coverflow__image" src="https://colorlib.com/wp/wp-content/uploads/sites/2/gatcomart-mega-ecommerce-website-template.jpg" /><img class="coverflow__image" src="https://www.templateshub.net/uploads/1537207366electrothumb.jpg" />
-    <img class="coverflow__image" src="https://www.pexels.com/photo/computers-cup-desk-gadgets-221011/" /><img class="coverflow__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/168886/bob-ross-4.jpg" />
-    <img class="coverflow__image" src="https://tse4.mm.bing.net/th?id=OIP.ymiy0ErSX9ZKl3TpBn_pKwHaGC&pid=Api&P=0&w=200&h=163" /><img class="coverflow__image" src="https://uicookies.com/wp-content/uploads/2019/11/Divisima.jpg" />
-    <img class="coverflow__image" src="https://colorlib.com/wp/wp-content/uploads/sites/2/gatcomart-mega-ecommerce-website-template.jpg" /><a class="next-arrow"></a>
+    <div className="coverflow">
+    <a className="prev-arrow" href='#/'>
+
+    </a>
+    <img className="coverflow__image" src="https://colorlib.com/wp/wp-content/uploads/sites/2/gatcomart-mega-ecommerce-website-template.jpg" alt='image1'/>
+    <img className="coverflow__image" src="https://www.templateshub.net/uploads/1537207366electrothumb.jpg" alt='image2'/>
+    <img className="coverflow__image" src={Image2} alt='image3'/>
+    <img className="coverflow__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/168886/bob-ross-4.jpg" alt='image4'/>
+    <img className="coverflow__image" src="https://tse4.mm.bing.net/th?id=OIP.ymiy0ErSX9ZKl3TpBn_pKwHaGC&pid=Api&P=0&w=200&h=163" alt='image5'/>
+    <img className="coverflow__image" src="https://uicookies.com/wp-content/uploads/2019/11/Divisima.jpg" alt='image6'/>
+    <img className="coverflow__image" src="https://colorlib.com/wp/wp-content/uploads/sites/2/gatcomart-mega-ecommerce-website-template.jpg" alt='image7'/>
+    <a className="next-arrow" href='#/'>
+
+    </a>
     </div>
 </>
   )

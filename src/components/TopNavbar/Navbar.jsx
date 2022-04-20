@@ -324,7 +324,9 @@ export default function Header() {
                 _hover={{ color: cl }}
                 _focus={{ boxShadow: "none" }}
               >
-                Templates
+                <NavLink exact="true" to="/templates">
+                            Templates
+                          </NavLink>
               </Button>
               <Button
                 bg={bg}
