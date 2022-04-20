@@ -1,22 +1,22 @@
 import React from 'react'
-import Navbar from './components/Navbar/Navbar'
 import Navbar1 from './components/TopNavbar/Navbar'
-import Hero from './components/Hero/Hero'
-import Temp from './components/TemplateShowCase/Temp'
-import Carousal from './components/Carousal/Carousal'
-import Contact from './components/ContactUsPage/Contact'
+// import Hero from './components/Hero/Hero'
+// import Temp from './components/TemplateShowCase/Temp'
+// import Carousal from './components/Carousal/Carousal'
+import { Routes, Route } from "react-router-dom";
+// import Contact from './components/ContactUsPage/Contact'
+import About from './components/AboutUs/About';
+import Home from './components/Home';
 const App = () => {
   return (
     <>
-    {/* <Navbar/> */}
-    {/* <ContactUs/> */}
     <Navbar1/>
-    <Hero/>
-    <Temp/>
-    <div className='carousalDiv ' >
-    <Carousal/>
-    </div>
-    <Contact/>
+    <Routes>
+                        <Route path='/about' element={<About/>} />
+                        <Route path='/' element={<Home/>} />
+                        </Routes>
+
+    
     </>
   )
 }

@@ -7,6 +7,7 @@ import {
     AiFillWechat
     
   } from "react-icons/ai";
+  import { NavLink } from "react-router-dom";
 import {
   chakra,
   HStack,
@@ -310,7 +311,9 @@ export default function Header() {
                 _hover={{ color: cl }}
                 _focus={{ boxShadow: "none" }}
               >
-                Home
+                <NavLink exact="true" to="/">
+                            Home
+                          </NavLink>
               </Button>
               <Button
                 bg={bg}
@@ -332,7 +335,9 @@ export default function Header() {
                 _hover={{ color: cl }}
                 _focus={{ boxShadow: "none" }}
               >
-                About Us
+                <NavLink exact="true" to="/about">
+                            About Us
+                          </NavLink>
               </Button>
               <Button
                 bg={bg}
