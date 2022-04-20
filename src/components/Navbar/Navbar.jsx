@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <>
-  <div className="navbar--container sticky">
+  <div className="navbar--container sticky ">
     <div className="navbar--title">
       <h4>navigation</h4>
     </div>
@@ -41,9 +41,7 @@ const Navbar = () => {
       <a href="">Carrer</a>
     </div>
   </div>
-</>
-
-  )
+</>);
 }
 
-export default Navbar
+export default Navbar;

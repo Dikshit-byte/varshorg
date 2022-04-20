@@ -348,7 +348,9 @@ export default function Header() {
                 _hover={{ color: cl }}
                 _focus={{ boxShadow: "none" }}
               >
-                Contact Us
+                <NavLink exact="true" to="/contact">
+                            Contact Us
+                          </NavLink>
               </Button>
               <Button
                 bg={bg}

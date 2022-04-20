@@ -14,7 +14,6 @@ function Home() {
     <div className='carousalDiv ' >
     <Carousal/>
     </div>
-    <Contact/>
     </>
   )
 }
